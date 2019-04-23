@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#354A5F">
+
+    <TextView
+        android:id="@+id/tv_music_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:text="黑夜的乌鸦"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_music_singer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="Hush"
+        android:textColor="#f9f9f9"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_music_name" />
+
+    <RelativeLayout
+        android:id="@+id/rl_album_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/bg_white_radius4"
+        android:gravity="center"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_music_singer">
+
+        <ImageView
+            android:id="@+id/iv_album"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:scaleType="centerCrop"
+             />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_music_time_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:drawableLeft="@mipmap/ic_music_bo"
+        android:drawablePadding="4dp"
+        android:text="00:00"
+        android:textColor="@color/white"
+        android:layout_marginBottom="2dp"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toTopOf="@+id/sb_music_progress"
+        app:layout_constraintLeft_toLeftOf="@+id/sb_music_progress" />
+
+    <TextView
+        android:id="@+id/tv_music_time_total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:drawablePadding="4dp"
+        android:text="00:00"
+        android:textColor="@color/white"
+        android:layout_marginBottom="2dp"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toTopOf="@+id/sb_music_progress"
+        app:layout_constraintRight_toRightOf="@+id/sb_music_progress" />
+
+    <SeekBar
+        android:id="@+id/sb_music_progress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="20dp"
+        android:indeterminateTint="#dbdbdb"
+        android:maxHeight="3dp"
+        android:minHeight="3dp"
+        android:progress="0"
+        android:progressDrawable="@drawable/progress_music_play"
+        android:thumb="@drawable/seekbar_thumb_music_progress"
+        app:layout_constraintTop_toBottomOf="@+id/rl_album_layout" />
+
+    <CheckBox
+        android:id="@+id/cb_play"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/cb_music_play"
+        android:button="@null"
+        android:checked="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sb_music_progress" />
+
+
+    <Button
+        android:id="@+id/btn_replay"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@mipmap/ic_music_stop"
+        app:layout_constraintRight_toRightOf="@+id/sb_music_progress"
+        app:layout_constraintTop_toBottomOf="@+id/sb_music_progress" />
+
+    <CheckBox
+        android:id="@+id/cb_heart"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/cb_music_heart"
+        android:button="@null"
+        android:checked="true"
+        app:layout_constraintLeft_toLeftOf="@+id/sb_music_progress"
+        app:layout_constraintTop_toBottomOf="@+id/sb_music_progress" />
+</android.support.constraint.ConstraintLayout>
